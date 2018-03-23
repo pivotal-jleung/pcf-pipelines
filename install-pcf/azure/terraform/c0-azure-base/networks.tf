@@ -38,3 +38,17 @@ resource "azurerm_subnet" "dynamic_services_subnet" {
   virtual_network_name = "${azurerm_virtual_network.pcf_virtual_network.name}"
   address_prefix       = "${var.azure_terraform_subnet_dynamic_services_cidr}"
 }
+
+resource "azurerm_subnet" "dmz_subnet" {
+  name                 = "${var.env_name}-dmz-subnet"
+  resource_group_name  = "${azurerm_resource_group.pcf_resource_group.name}"
+  virtual_network_name = "${azurerm_virtual_network.pcf_virtual_network.name}"
+  address_prefix       = "${var.azure_terraform_subnet_dmz_cidr}"
+}
+
+resource "azurerm_subnet" "internal_subnet" {
+  name                 = "${var.env_name}-internal-subnet"
+  resource_group_name  = "${azurerm_resource_group.pcf_resource_group.name}"
+  virtual_network_name = "${azurerm_virtual_network.pcf_virtual_network.name}"
+  address_prefix       = "${var.azure_terraform_subnet_internal_cidr}"
+}
