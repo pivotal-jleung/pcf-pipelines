@@ -12,8 +12,7 @@ inputs:
   - name: terraform-state
 
 outputs:
-  - name: terraform-state-output
-
+  - name: terraform-state-outpu
 run:
   path: pcf-pipelines/install-pcf/azure/tasks/create-infrastructure/task.sh
 
@@ -46,5 +45,9 @@ params:
   AZURE_TERRAFORM_SUBNET_DYNAMIC_SERVICES_CIDR:
   AZURE_TERRAFORM_SUBNET_DMZ_CIDR:
   AZURE_TERRAFORM_SUBNET_INTERNAL_CIDR:
+  AZURE_WEB_LB_IP:
+  AZURE_TCP_LB_IP:
+  AZURE_SSH_PROXY_LB_IP:
+  AZURE_MYSQL_LB_IP:
   AZURE_TERRAFORM_OPSMAN_PRIV_IP:
   PCF_OPSMAN_DISK_SIZE_IN_GB:
