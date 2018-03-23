@@ -12,7 +12,7 @@ inputs:
   - name: terraform-state
 
 outputs:
-  - name: terraform-state-outpu
+  - name: terraform-state-output
 run:
   path: pcf-pipelines/install-pcf/azure/tasks/create-infrastructure/task.sh
 
