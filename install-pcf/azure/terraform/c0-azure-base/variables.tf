@@ -27,6 +27,10 @@ variable "azure_web_lb_ip" {}
 variable "azure_tcp_lb_ip" {}
 variable "azure_ssh_proxy_lb_ip" {}
 variable "azure_mysql_lb_ip" {}
+variable "azure_dmz_web_lb_ip" {}
+variable "azure_dmz_tcp_lb_ip" {}
+variable "azure_internal_web_lb_ip" {}
+variable "azure_internal_tcp_lb_ip" {}
 
 
 variable "pcf_ert_domain" {}
