@@ -67,6 +67,10 @@ terraform plan \
   -var "azure_tcp_lb_ip=${AZURE_TCP_LB_IP}" \
   -var "azure_ssh_proxy_lb_ip=${AZURE_SSH_PROXY_LB_IP}" \
   -var "azure_mysql_lb_ip=${AZURE_MYSQL_LB_IP}" \
+  -var "azure_dmz_web_lb_ip=${AZURE_DMZ_WEB_LB_IP}" \
+  -var "azure_dmz_tcp_lb_ip=${AZURE_DMZ_TCP_LB_IP}" \
+  -var "azure_internal_web_lb_ip=${AZURE_INTERNAL_WEB_LB_IP}" \
+  -var "azure_internal_tcp_lb_ip=${AZURE_INTERNAL_TCP_LB_IP}" \
   -var "ert_subnet_id=${ERT_SUBNET}" \
   -var "pcf_ert_domain=${PCF_ERT_DOMAIN}" \
   -var "system_domain=${SYSTEM_DOMAIN}" \
