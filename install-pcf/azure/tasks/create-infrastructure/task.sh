@@ -61,6 +61,8 @@ terraform plan \
   -var "azure_terraform_subnet_ert_cidr=${AZURE_TERRAFORM_SUBNET_ERT_CIDR}" \
   -var "azure_terraform_subnet_services1_cidr=${AZURE_TERRAFORM_SUBNET_SERVICES1_CIDR}" \
   -var "azure_terraform_subnet_dynamic_services_cidr=${AZURE_TERRAFORM_SUBNET_DYNAMIC_SERVICES_CIDR}" \
+  -var "azure_terraform_subnet_dmz_cidr=${AZURE_TERRAFORM_SUBNET_DMZ_CIDR}" \
+  -var "azure_terraform_subnet_internal_cidr=${AZURE_TERRAFORM_SUBNET_INTERNAL_CIDR}" \
   -var "ert_subnet_id=${ERT_SUBNET}" \
   -var "pcf_ert_domain=${PCF_ERT_DOMAIN}" \
   -var "system_domain=${SYSTEM_DOMAIN}" \
