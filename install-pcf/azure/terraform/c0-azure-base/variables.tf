@@ -20,6 +20,8 @@ variable "azure_terraform_subnet_infra_cidr" {}
 variable "azure_terraform_subnet_ert_cidr" {}
 variable "azure_terraform_subnet_services1_cidr" {}
 variable "azure_terraform_subnet_dynamic_services_cidr" {}
+variable "azure_terraform_subnet_dmz_cidr" {}
+variable "azure_terraform_subnet_internal_cidr" {}
 
 variable "pcf_ert_domain" {}
 variable "apps_domain" {}
