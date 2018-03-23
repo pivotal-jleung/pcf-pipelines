@@ -12,6 +12,8 @@ resource "azurerm_lb" "mysql" {
   frontend_ip_configuration = {
     name      = "frontendip"
     subnet_id = "${azurerm_subnet.ert_subnet.id}"
+    private_ip_address_allocation = "static"
+    private_ip_address            = "${var.azure_mysql_lb_ip}"
   }
 }
 

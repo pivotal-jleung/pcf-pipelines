@@ -16,6 +16,8 @@ resource "azurerm_lb" "web" {
   frontend_ip_configuration = {
     name                 = "frontendip"
     subnet_id = "${azurerm_subnet.ert_subnet.id}"
+    private_ip_address_allocation = "static"
+    private_ip_address            = "${var.azure_web_lb_ip}"
   }
 }
 
@@ -28,6 +30,8 @@ resource "azurerm_lb" "tcp" {
   frontend_ip_configuration = {
     name                 = "frontendip"
     subnet_id = "${azurerm_subnet.ert_subnet.id}"
+    private_ip_address_allocation = "static"
+    private_ip_address            = "${var.azure_tcp_lb_ip}"
   }
 }
 
@@ -41,6 +45,8 @@ resource "azurerm_lb" "ssh-proxy" {
   frontend_ip_configuration = {
     name                 = "frontendip"
     subnet_id = "${azurerm_subnet.ert_subnet.id}"
+    private_ip_address_allocation = "static"
+    private_ip_address            = "${var.azure_ssh_proxy_lb_ip}"
   }
 }
 

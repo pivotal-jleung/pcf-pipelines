@@ -23,6 +23,12 @@ variable "azure_terraform_subnet_dynamic_services_cidr" {}
 variable "azure_terraform_subnet_dmz_cidr" {}
 variable "azure_terraform_subnet_internal_cidr" {}
 
+variable "azure_web_lb_ip" {}
+variable "azure_tcp_lb_ip" {}
+variable "azure_ssh_proxy_lb_ip" {}
+variable "azure_mysql_lb_ip" {}
+
+
 variable "pcf_ert_domain" {}
 variable "apps_domain" {}
 variable "system_domain" {}
