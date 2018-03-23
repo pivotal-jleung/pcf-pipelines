@@ -72,7 +72,7 @@ resource "azurerm_lb" "dmz-tcp" {
 
   frontend_ip_configuration = {
     name                 = "frontendip"
-    subnet_id = "${azurerm_subnet.ert_subnet.id}"
+    subnet_id = "${azurerm_subnet.dmz_subnet.id}"
     private_ip_address_allocation = "static"
     private_ip_address            = "${var.azure_dmz_tcp_lb_ip}"
   }
@@ -100,7 +100,7 @@ resource "azurerm_lb" "internal-tcp" {
 
   frontend_ip_configuration = {
     name                 = "frontendip"
-    subnet_id = "${azurerm_subnet.ert_subnet.id}"
+    subnet_id = "${azurerm_subnet.internal_subnet.id}"
     private_ip_address_allocation = "static"
     private_ip_address            = "${var.azure_internal_tcp_lb_ip}"
   }
