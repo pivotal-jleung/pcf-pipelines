@@ -55,7 +55,7 @@ resources:
 - name: pcf-pipelines
   type: git
   source:
-    uri: git@github.com:pivotal-cf/pcf-pipelines.git
+    uri: git@github.com:pivotal-jleung/pcf-pipelines.git
     branch: master
     private_key: {{git_private_key}}
 
@@ -188,6 +188,16 @@ jobs:
       AZURE_TERRAFORM_SUBNET_ERT_CIDR: {{azure_terraform_subnet_ert_cidr}}
       AZURE_TERRAFORM_SUBNET_SERVICES1_CIDR: {{azure_terraform_subnet_services1_cidr}}
       AZURE_TERRAFORM_SUBNET_DYNAMIC_SERVICES_CIDR: {{azure_terraform_subnet_dynamic_services_cidr}}
+      AZURE_TERRAFORM_SUBNET_DMZ_CIDR: {{azure_terraform_subnet_dmz_cidr}}
+      AZURE_TERRAFORM_SUBNET_INTERNAL_CIDR: {{azure_terraform_subnet_internal_cidr}}
+      AZURE_WEB_LB_IP: {{azure_web_lb_ip}}
+      AZURE_TCP_LB_IP: {{azure_tcp_lb_ip}}
+      AZURE_SSH_PROXY_LB_IP: {{azure_ssh_proxy_lb_ip}}
+      AZURE_MYSQL_LB_IP: {{azure_mysql_lb_ip}}
+      AZURE_DMZ_WEB_LB_IP: {{azure_dmz_web_lb_ip}}
+      AZURE_DMZ_TCP_LB_IP: {{azure_dmz_tcp_lb_ip}}
+      AZURE_INTERNAL_WEB_LB_IP: {{azure_internal_web_lb_ip}}
+      AZURE_INTERNAL_TCP_LB_IP: {{azure_internal_tcp_lb_ip}}
       PCF_OPSMAN_DISK_SIZE_IN_GB: {{pcf_opsman_disk_size_in_gb}}
 
 ##############################
@@ -201,7 +211,7 @@ jobs:
   - aggregate:
     - get: pcf-pipelines
     - get: pivnet-opsmgr
-      passed: [create-infrastructure]
+#      passed: [create-infrastructure]
       params:
         globs: []
 
@@ -531,4 +541,3 @@ jobs:
       OPSMAN_PASSWORD: {{opsman_admin_password}}
       OPSMAN_CLIENT_ID: ""
       OPSMAN_CLIENT_SECRET: ""
-
